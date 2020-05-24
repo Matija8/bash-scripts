@@ -4,12 +4,14 @@
 # Matija8
 # Download youtube playlists with youtube-dl
 
-# usage="Usage: ./dl_playlist.sh [-h] [-f=V[+A]]"
+# usage="Usage: ./dl_playlist.sh [-h] [-i] [-f=V[+A]]"
 usage="Usage: ./dl_playlist.sh playlist_url1 pl_url2..."
 
 # while getopts ":hf" opt; do
 #   case ${opt} in
 #     h ) # process option h
+#       ;;
+#     i ) # process option i
 #       ;;
 #     f ) # process option f
 #       ;;
@@ -20,7 +22,7 @@ usage="Usage: ./dl_playlist.sh playlist_url1 pl_url2..."
 
 function dl_playlist {
     printf "Downloading playlist ${1}...\n"
-    youtube-dl -o "%(playlist_index)s %(title)s.%(ext)s" $1
+    youtube-dl -i -o "%(playlist_index)s %(title)s.%(ext)s" -f22 $1
     printf "Downloading playlist ${1} done.\n"
 }
 
