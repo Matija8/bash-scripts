@@ -6,7 +6,7 @@
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-printf "\n\n${RED}Update:${NC}\n\n"
+sudo printf "\n\n${RED}Update:${NC}\n\n"
 sudo apt update
 
 printf "\n\n${RED}Upgrade:${NC}\n\n"
