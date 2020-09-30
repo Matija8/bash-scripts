@@ -13,4 +13,4 @@ printf "\n\n${RED}Upgrade:${NC}\n\n"
 sudo apt upgrade -y
 
 printf "\n\n${RED}Autoremove:${NC}\n\n"
-sudo apt autoremove
+sudo apt autoremove -y
