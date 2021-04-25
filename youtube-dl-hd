@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# coding: UTF-8
-
-youtube-dl -f137+140 -i $@
