@@ -15,8 +15,7 @@ echo "Port to clear is: $1"
 processes_holding_port=$(sudo lsof -t -i:$1)
 echo $processes_holding_port
 
-for i in $processes_holding_port
-do
+for i in $processes_holding_port; do
     echo $i
     sudo kill -9 $i
 done

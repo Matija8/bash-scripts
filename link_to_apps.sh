@@ -8,8 +8,7 @@ cd $(dirname "$0")
 files_to_link=(q_update.sh clear_port.sh dl_playlist.sh)
 
 # https://stackoverflow.com/questions/47367985/expanding-a-bash-array-only-gives-the-first-element
-for file in ${files_to_link[@]};
-do
+for file in ${files_to_link[@]}; do
     echo "Updating $file"
     ln -sf "$(pwd)/$file" ~/Apps/bin/$file
 done
