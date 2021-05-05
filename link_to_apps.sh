@@ -13,4 +13,11 @@ for file in ${files_to_link[@]}; do
     ln -sf "$(pwd)/$file" ~/Apps/bin/$file
 done
 
+# After calling this script call
+# $ hash -r
+# if in bash, or
+# $ rehash
+# if in zsh,
+# where $ is the shell prompt.
+
 echo "Linking done!"
