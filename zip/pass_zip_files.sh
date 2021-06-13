@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # coding: UTF-8
 
-# Usage: Zip folder {folder_to_zip} with password {passwd}.
+# Usage: Zip files {files_to_zip} with password {passwd}.
 
 # Zip
 echo "Starting zip..."
@@ -13,17 +13,14 @@ date=$(date '+%Y-%m-%d')
 # zipped_name="zipped $date.zip"
 
 passwd="A password"
-# Cd to this scripts directory.
-cd "$(dirname "$0")"
-folder_to_zip="./"
-FolderToNotZip="Put folder to ignore here."
+files_to_zip="LICENSE README.md"
+rm -f "$zipped_name"
 
 zip \
-"$zipped_name" \
 -q \
--r "$folder_to_zip" \
--P "${passwd}" \
--x "$zipped_name" "$FolderToNotZip"/\* &&
+"$zipped_name" \
+$files_to_zip \
+-P "${passwd}" &&
     echo "Zip success." || echo "Zip failure."
 echo "Zip done!"
 duration=$((SECONDS - start))
