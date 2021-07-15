@@ -8,7 +8,7 @@ files_to_link=(q_update.sh
     clear_port.sh
     dl_playlist.sh
     start_mongod.sh
-    youtube-dh-hd.sh
+    youtube-dl-hd.sh
     /zip/zip_current_dir.sh)
 
 # https://stackoverflow.com/questions/47367985/expanding-a-bash-array-only-gives-the-first-element
